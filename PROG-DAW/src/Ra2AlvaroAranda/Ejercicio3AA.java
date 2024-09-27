@@ -15,14 +15,9 @@ public class Ejercicio3AA {
 
         String str = frase2;
         int len = str.length();
-        System.out.println(len);
+        System.out.println("Tu frase tiene " + len + " caracteres");
 
 
-        /*
-
-
-
-        System.out.println("Tu frase tiene " + args.length(frase) + "caracteres");*/
 
 
     }
