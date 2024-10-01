@@ -2,7 +2,7 @@ package Ra2AlvaroAranda;
 
 import java.util.Scanner;
 
-public class Ejercicio11AA {
+public class Ejercicio11_1AA {
     public static void main(String[] args) {
 
         /*
@@ -26,6 +26,11 @@ public class Ejercicio11AA {
         System.out.println("¿Qué operación quiere realizar?: sumar / restar / multiplicar / dividir ");
 
         String respuesta = scl.nextLine();
+
+        for (int i = 0 ; i > 3 ; i++)
+        {
+
+        }
 
         if (respuesta.equals(suma)) {
             System.out.println("La suma es " + (num1 + num2));
