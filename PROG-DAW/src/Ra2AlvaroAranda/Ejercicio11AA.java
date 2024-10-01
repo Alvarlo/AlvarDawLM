@@ -1,6 +1,5 @@
 package Ra2AlvaroAranda;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Ejercicio11AA {
@@ -27,17 +26,19 @@ public class Ejercicio11AA {
         System.out.println("¿Qué operación quiere realizar?: sumar / restar / multiplicar / dividir ");
 
         String respuesta = scl.nextLine();
-        boolean resultado;
 
-        if (respuesta == respuesta1) {
+        if (respuesta.equals(respuesta1)) {
             System.out.println("La suma es " + (num1 + num2));
         }
-        else if (respuesta == respuesta2){
+        else if (respuesta.equals(respuesta2)){
             System.out.println("La resta es " + (num1 - num2));
         }
-        else if (respuesta == respuesta3){
+        else if (respuesta.equals(respuesta3)){
             System.out.println("La multiplicacion es " + (num1 * num2));
-        } else if (respuesta == respuesta4) {  System.out.println("La division es " + (num1 / num2));}
+        }
+        else if (respuesta.equals(respuesta4)) {
+            System.out.println("La division es " + (num1 / num2));
+        }
 
 
 
@@ -45,7 +46,6 @@ public class Ejercicio11AA {
         Añade al ejercicio 1 la pregunta de qué tipo de operación quiere que se realice, de tal
         forma que el usuario inserte dos números y la operación que quiere que se ejecute, y
         el programa devuelva la salida correcta
-
          */
 
 
