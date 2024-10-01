@@ -15,11 +15,11 @@ public class Ejercicio8AA {
 
         System.out.println("Inserte fecha: (DD/MM/AAAA): ");
 
-        byte dia = (byte) scl.nextInt();
-        byte mes = (byte) scl.nextInt();
-        short año = (short) scl.nextInt();
+        byte day = (byte) scl.nextInt();
+        byte month = (byte) scl.nextInt();
+        short year = (short) scl.nextInt();
 
 
-        System.out.println("Hoy es el día " + dia + " del mes " + mes + " del año " + año);
+        System.out.println("Hoy es el día " + day + " del mes " + month + " del año " + year);
     }
 }
