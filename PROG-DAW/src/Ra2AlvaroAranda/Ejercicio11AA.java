@@ -1,5 +1,6 @@
 package Ra2AlvaroAranda;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Ejercicio11AA {
@@ -11,17 +12,33 @@ public class Ejercicio11AA {
          */
 
         Scanner scn = new Scanner(System.in);
+        Scanner scl = new Scanner(System.in);
+        String respuesta1 = "sumar";
+        String respuesta2 = "restar";
+        String respuesta3 = "multiplicar";
+        String respuesta4 = "dividir";
+
 
         System.out.println("Inserta dos numeros");
 
         int num1 = scn.nextInt();
         int num2 = scn.nextInt();
 
+        System.out.println("¿Qué operación quiere realizar?: sumar / restar / multiplicar / dividir ");
 
-        System.out.println("La suma es " + (num1 + num2));
-        System.out.println("La resta es " + (num1 - num2));
-        System.out.println("La multiplicacion es " + (num1 * num2));
-        System.out.println("La division es " + (num1 / num2));
+        String respuesta = scl.nextLine();
+        boolean resultado;
+
+        if (respuesta == respuesta1) {
+            System.out.println("La suma es " + (num1 + num2));
+        }
+        else if (respuesta == respuesta2){
+            System.out.println("La resta es " + (num1 - num2));
+        }
+        else if (respuesta == respuesta3){
+            System.out.println("La multiplicacion es " + (num1 * num2));
+        } else if (respuesta == respuesta4) {  System.out.println("La division es " + (num1 / num2));}
+
 
 
         /*
@@ -30,6 +47,8 @@ public class Ejercicio11AA {
         el programa devuelva la salida correcta
 
          */
+
+
 
 
 
