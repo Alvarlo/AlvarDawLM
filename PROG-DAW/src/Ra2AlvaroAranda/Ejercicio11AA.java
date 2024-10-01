@@ -12,10 +12,10 @@ public class Ejercicio11AA {
 
         Scanner scn = new Scanner(System.in);
         Scanner scl = new Scanner(System.in);
-        String respuesta1 = "sumar";
-        String respuesta2 = "restar";
-        String respuesta3 = "multiplicar";
-        String respuesta4 = "dividir";
+        String suma = "sumar";
+        String resta = "restar";
+        String multi = "multiplicar";
+        String divi = "dividir";
 
 
         System.out.println("Inserta dos numeros");
@@ -27,16 +27,16 @@ public class Ejercicio11AA {
 
         String respuesta = scl.nextLine();
 
-        if (respuesta.equals(respuesta1)) {
+        if (respuesta.equals(suma)) {
             System.out.println("La suma es " + (num1 + num2));
         }
-        else if (respuesta.equals(respuesta2)){
+        else if (respuesta.equals(resta)){
             System.out.println("La resta es " + (num1 - num2));
         }
-        else if (respuesta.equals(respuesta3)){
+        else if (respuesta.equals(multi)){
             System.out.println("La multiplicacion es " + (num1 * num2));
         }
-        else if (respuesta.equals(respuesta4)) {
+        else if (respuesta.equals(divi)) {
             System.out.println("La division es " + (num1 / num2));
         }
 
