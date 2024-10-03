@@ -1,7 +1,8 @@
 package Ra2AlvaroAranda;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import java.util.Scanner;
 
 public class Ejercicio8_3AA {
@@ -16,19 +17,19 @@ public class Ejercicio8_3AA {
 
         System.out.println("Inserte fecha: (DD/MM/AAAA): ");
 
-        String fecha = scl.nextLine();
-        LocalDate 
+        /*String fecha = scl.nextd();
+        LocalDateTime mifecha =
 
 
 
 
-        String day = fecha.substring(0,1);
+       String day = fecha.substring(0,1);
         String month = fecha.substring(3,4);
         String year = fecha.substring(6,9);
 
 
 
 
-        System.out.println("Hoy es el día " + day + " del mes " + month + " del año " + year);
+        System.out.println("Hoy es el día " + day + " del mes " + month + " del año " + year); */
     }
 }

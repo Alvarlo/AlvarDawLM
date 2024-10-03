@@ -2,7 +2,7 @@ package Ra2AlvaroAranda;
 
 import java.util.Scanner;
 
-public class Ejercicio6AA {
+public class Ejercicio6_2AA {
     public static void main(String[] args) {
         /*
         Crea un programa que pregunte el número de capítulos de la nueva temporada de
@@ -16,7 +16,10 @@ public class Ejercicio6AA {
 
         int guess = scn.nextInt();
 
-        String respuesta = (guess == CAPITULOS)? "Has acertado!":"Has fallado... intentalo de nuevo";
-        System.out.println(respuesta);
+        if (guess == CAPITULOS){
+            System.out.println("Has acertado!");
+        }else{
+            System.out.println("Has fallado... intentalo de nuevo");
+        }
     }
 }

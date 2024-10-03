@@ -2,7 +2,7 @@ package Ra2AlvaroAranda;
 
 import java.util.Scanner;
 
-public class Ejercicio12AA {
+public class Ejercicio12_3AA {
     public static void main(String[] args) {
         /*
         Con el programa anterior crea un menú que se muestre como el siguiente:
@@ -18,22 +18,25 @@ public class Ejercicio12AA {
         Scanner scn1 = new Scanner(System.in);
         Scanner scn2 = new Scanner(System.in);
 
-        System.out.println("Inserta dos numeros");
-
-        int num1 = scn1.nextInt();
-        int num2 = scn1.nextInt();
-
-        System.out.println("¿Qué operación quiere realizar?");
-        System.out.println("1-Sumar");
-        System.out.println("2-Restar");
-        System.out.println("3-Multiplicar");
-        System.out.println("4-Dividir");
-        System.out.println("5-Salir");
-
-        int num3 = scn2.nextInt();
 
 
+        int num3 = 0;
         do {
+            System.out.println("Inserta dos numeros");
+
+            int num1 = scn1.nextInt();
+            int num2 = scn1.nextInt();
+
+
+            System.out.println("¿Qué operación quiere realizar?");
+            System.out.println("1-Sumar");
+            System.out.println("2-Restar");
+            System.out.println("3-Multiplicar");
+            System.out.println("4-Dividir");
+            System.out.println("5-Salir");
+
+            num3 = scn2.nextInt();
+
             if (num3 == 1) {
                 System.out.println("La suma es " + (num1 + num2));
             }
