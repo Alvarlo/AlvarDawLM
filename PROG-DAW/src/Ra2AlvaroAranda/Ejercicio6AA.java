@@ -10,9 +10,11 @@ public class Ejercicio6AA {
          */
         Scanner scn = new Scanner(System.in);
 
+        final int CAPITULOS = 25;
+
         int guess = scn.nextInt();
 
-        String respuesta = (guess == 25)? "Has acertado!":"Has fallado... intentalo de nuevo";
+        String respuesta = (guess == CAPITULOS)? "Has acertado!":"Has fallado... intentalo de nuevo";
         System.out.println(respuesta);
     }
 }

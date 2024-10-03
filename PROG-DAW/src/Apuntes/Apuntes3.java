@@ -19,8 +19,7 @@ public class Apuntes3 {
          */
 
         String frase = "Hola";
-        System.out.println(frase.equals("Hola"));
-        System.out.println(frase.equalsIgnoreCase());
+        System.out.println(frase.replace ('a', 'o'));
 
 
 
