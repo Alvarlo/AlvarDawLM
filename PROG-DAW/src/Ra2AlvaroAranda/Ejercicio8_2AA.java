@@ -19,13 +19,20 @@ public class Ejercicio8_2AA {
 
 
 
-        String day = fecha.substring(0,1);
-        String month = fecha.substring(3,4);
-        String year = fecha.substring(6,9);
+        String day = fecha.substring(0,2);
+        String month = fecha.substring(3,5);
+        String year = fecha.substring(6,10);
 
 
 
 
         System.out.println("Hoy es el día " + day + " del mes " + month + " del año " + year);
+
+        int tomorrow = Integer.parseInt(day);
+        int tmrrow = tomorrow + 1;
+
+        System.out.println("Mañana es el día " + tmrrow + " del mes " + month + " del año " + year);
+
+
     }
 }
