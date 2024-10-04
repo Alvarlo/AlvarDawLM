@@ -8,7 +8,11 @@ public class Ejercicio11AA {
         /*
         Ejercicio1: Pide dos números y muestra la suma, resta, multiplicación y división de ambos.
 
+        Añade al ejercicio 1 la pregunta de qué tipo de operación quiere que se realice, de tal
+        forma que el usuario inserte dos números y la operación que quiere que se ejecute, y
+        el programa devuelva la salida correcta
          */
+
 
         Scanner scn = new Scanner(System.in);
         Scanner scl = new Scanner(System.in);
@@ -40,11 +44,7 @@ public class Ejercicio11AA {
             System.out.println("La division es " + (num1 / num2));
         }
 
-        /*
-        Añade al ejercicio 1 la pregunta de qué tipo de operación quiere que se realice, de tal
-        forma que el usuario inserte dos números y la operación que quiere que se ejecute, y
-        el programa devuelva la salida correcta
-         */
+
 
 
 
