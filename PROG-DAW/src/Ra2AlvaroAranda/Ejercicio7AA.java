@@ -11,9 +11,9 @@ public class Ejercicio7AA {
         Scanner scn = new Scanner(System.in);
         System.out.print("Temperatura en Celsius:");
 
-        int celsius = scn.nextInt();
+        double celsius = scn.nextDouble();
 
-        int fahrenheit = (celsius*9/5 + 32);
+        double fahrenheit = (celsius*(9.0/5) + 32);
 
         System.out.println(celsius + " grados Celsius equivalen a " + fahrenheit + " grados Fahrenheit");
 
