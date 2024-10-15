@@ -9,29 +9,66 @@
         body {
             margin: 0px;
             padding: 0px;
-            background-color:lightslategray;
-            
+            background-color: gray;
+            height: 300vh;
+
         }
 
         h1 {
             color: red;
             text-align: center;
+            margin: 0px;
+            padding: 20px;
+
+
         }
 
         #contenedor {
+
             margin: auto;
             padding: 0px;
             width: 70vw;
-            height: 70vh;
-        
+            height: 300vh;
+
             background-color: white;
+
+
+        }
+
+        #intro {
+            text-indent: 5vw;
+            text-align: justify;
+            margin-left: 5vw;
+            margin-right: 5vw;
+
+        }
+
+        #tabla {
+        
+            text-align: justify;
+            margin-inline: 5vw;
+            border-left: solid red;
+            padding: 10px;
+            
             
 
         }
+
         p {
-            text-indent: 5vw;
+            text-indent: 20px;
             text-align: justify;
-            margin: 3vw;
+            margin: 2vw;
+
+
+        }
+
+        h2 {
+            color: red;
+            text-align: left;
+            text-indent: 5%;
+            border-bottom: solid red;
+            width: 90%;
+            margin: auto;
 
         }
     </style>
@@ -40,22 +77,101 @@
 <body>
     <div id="contenedor">
         <h1>
-        Art Commodities: otro mercado del arte es posible.
-    </h1>
-    <p>
+            Art Commodities: otro mercado del arte es posible.
+        </h1>
+        <p id="intro">
+            Paolo Cirio es un artista y hacker cuyo trabajo se ha centrado en los últimos años en el análisis
+            y subversión de los sistemas que rigen nuestra sociedad, ya sea el sistema económico, las grandes empresas
+            que
+            dominan Internet, las redes sociales o los medios de comunicación. Su proyecto Loophole 4 All (2013),
+            premiado
+            con el Golden Nica en Ars Electronica este año, proponía a cualquier usuario evadir impuestos falsificando
+            la
+            identidad de una filial de una gran empresa en un paraíso fiscal. Cirio ha centrado su atención en los
+            últimos
+            meses en el mercado del arte (otro sistema marcado por grandes intereses económicos y una notoria opacidad),
+            dando lugar a un proyecto que ha lanzado hace unos días: Art Commodities.
+        </p>
+        <p>
+            Aún en fase beta, Art Commodities es de momento una propuesta teórica que el artista promete desarrollar con
+            una plataforma de venta de obras de arte digital a finales de este año. El modelo que plantea Cirio se basa
+            en la posibilidad de comprar obras de arte en formato de archivo digital, de tal manera que puedan ser
+            duplicadas sin limitación alguna, pero al mismo tiempo sólo puedan tener un único propietario.
+        </p>
+        <h2>
+            Objetos de arte inteligentes, contratos inteligentes
 
-   
-        Paolo Cirio es un artista y hacker cuyo trabajo se ha centrado en los últimos años en el análisis
-        y subversión de los sistemas que rigen nuestra sociedad, ya sea el sistema económico, las grandes empresas que
-        dominan Internet, las redes sociales o los medios de comunicación. Su proyecto Loophole 4 All (2013), premiado
-        con el Golden Nica en Ars Electronica este año, proponía a cualquier usuario evadir impuestos falsificando la
-        identidad de una filial de una gran empresa en un paraíso fiscal. Cirio ha centrado su atención en los últimos
-        meses en el mercado del arte (otro sistema marcado por grandes intereses económicos y una notoria opacidad),
-        dando lugar a un proyecto que ha lanzado hace unos días: Art Commodities.
-    </p>
+
+        </h2>
+        <p>
+            Art Commodities se basa en el concepto de Objeto de Arte Digital Inteligente (Smart Digital Art Object),
+            creado por Cirio y basado en la idea de Contratos Inteligentes (Smart Contracts) desarrollada por Nick Szabo
+            entre 1994 y 1997. Se trata de “un protocolo de transacción computerizada que ejecuta los términos de un
+            contrato”. Una aplicación de este tipo de contratos es insertarlos en objetos físicos (bienes) que puedan
+            verse afectados por el protocolo de tal manera que se convierten en “propiedad inteligente”: un ejemplo de
+            esto sería un coche equipado con un sistema que comprueba si se han pagado los plazos del préstamo al banco
+            y no arranca si hay un impagado, o bien si se ha denunciado el robo del coche, o bien si tiene un modo de
+            identificar al conductor como propietario del mismo.
+
+        </p>
+        <p>
+            Para asegurar el funcionamiento de estos “contratos inteligentes” y evitar el fraude, se emplean protocolos
+            de criptografía como PGP (“Pretty Good Privacy”), basado en el uso de una clave privada y una clave pública.
+            La clave privada es mantenida en secreto por el usuario, mientras que la clave pública es accesible a
+            cualquier persona que desee codificar un mensaje para que sólo pueda sea leído por dicho usuario con su
+            clave privada. Si bien la clave pública y la privada están relacionadas, es imposible conseguir la segunda a
+            partir de la primera.
+
+        </p>
+        <p>
+            De esta manera se puede elaborar también lo que se conoce como Propiedad Virtual Transferible. Un problema
+            que encontramos con los productos que adquirimos en formato digital es que dependen de una autoridad
+            central: ebooks, revistas, videojuegos y objetos adquiridos en entornos virtuales no pueden, en la mayoría
+            de los casos, trasladarse a otro entorno o soporte, sino que dependen en todo momento de una conexión con el
+            servidor de la empresa, que verifica la posesión del artículo en cuestión. Un sistema de codificación
+            inserto en el propio producto permitiría transferirlo a otra plataforma, puesto que siempre conservaría la
+            información de su propietario/a y podría así ser conservado o incluso vendido a otra persona, de la misma
+            manera en que esto es posible con un objeto físico.
+        </p>
+        <p>
+            Partiendo de estas ideas, Paolo Cirio desarrolla el Objeto de Arte Digital Inteligente, que define como “una
+            obra de arte digital en forma de archivo digital certificado por el artista”. La diferencia entre el Objeto
+            Inteligente y un archivo digital cualquiera es que permite “autentificar y certificar que se trata de un
+            objeto digital único al adjuntarle firmas y contratos digitales por medio de algoritmos criptográficos.”
+        </p>
+        <h2>Hacia la propiedad híbrida: otro mercado del arte es posible</h2>
+        <p>
+            El sistema descrito no se diferencia, en principio, de la práctica habitual de certificar la autenticidad de
+            una obra por medio de un documento firmado por el artista. Con todo, estos documentos tienen sus
+            limitaciones, según indica Nick Szabo, y se han empleado principalmente en el intercambio de obras basadas
+            en objetos físicos, cuya posesión y distribución puede ser controlada. Los archivos digitales plantean el
+            problema de su fácil duplicación y distribución, algo que empresas como Sedition han procurado resolver por
+            medio de una plataforma controlada y la emisión de “certificados de autenticidad digitales”, que resultan
+            totalmente inefectivos, como he mostrado en este proyecto y he comentado en esta entrevista y esta otra
+            entrevista.
+        </p>
+        <p>
+            Cirio integra este certificado de manera segura en el propio archivo, con lo cual podría resolver el
+            problema
+            planteado por la necesidad de asegurar la propiedad de la obra pese a su reproductibilidad. Con todo, su
+            proyecto no se limita a este fin. Según afirma:
+        </p>
+        <div id="tabla">“El potencial de la certificación criptográfica también permite que estos objetos de arte
+            digital se intercambien como bienes (de la misma manera que cualquier otro objeto de arte) cuya propiedad
+            pueden ser demostrada por medio de la posesión de las claves criptográficas de dicho objeto.
 
 
-</div>
+
+        </div>
+        <div id="tabla">Este tipo de propiedad es diferente de la que solemos conocer. El objeto puede aún duplicarse
+            infinitamente, es fácilmente transferible y puede ser usado por cualquiera, sin embargo tiene un propietario
+            definido.
+        </div>
+        <div id="tabla">Esta noción evolucionada e híbrida de propiedad privada libera el potencial para que un bien sea
+            propiedad de una persona y de todos a la vez…”</div>
+
+
+    </div>
 
 </body>
 
