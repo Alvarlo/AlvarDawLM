@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #superior {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 400px;
+            align-items: center;
+
+        }
+
+        #superior>article {
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+            align-content: center;
+            text-align: center;
+        }
+
+        #inferior {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 400px;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        #inferior>article {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            align-content: center;
+            text-align: center;
+            margin: 10px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>MANEJANDO FLEXBOX</h1>
+    <section id="superior">
+        <article>UNO</article>
+        <article>DOS</article>
+        <article>TRES</article>
+        <article>CUATRO</article>
+
+    </section>
+    <section id="inferior">
+        <article style="width: 550px;">UNO</article>
+        <article>DOS</article>
+        <article>TRES</article>
+        <article>CUATRO</article>
+        <article style="width: 550px;">CINCO</article>
+        <article>SEIS</article>
+        <article>SIETE</article>
+        <article>OCHO</article>
+        <article style="width: 550px;">NUEVE</article>
+        <article>DIEZ</article>
+        <article>ONCE</article>
+        <article>DOCE</article>
+
+
+    </section>
+</body>
+
+</html>
