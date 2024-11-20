@@ -1,0 +1,11 @@
+body{    
+    color: blue;
+    
+}
+p.p1, p.p4{
+    font-weight: bold;
+}
+p.p2{
+    color: green;
+    font-weight: bold;
+}
