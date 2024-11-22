@@ -1,0 +1,31 @@
+body {
+    font-size: 12pt;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 24pt;
+    color: brown;
+
+}
+
+ul {
+    text-decoration: underline;
+    list-style-position: inside;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline double;
+    font-weight: bold;
+}
+
+a:link {
+    color: rgb(85, 85, 85);
+    font-style: italic;
+}
+
+a:visited {
+    color: red;
+}
