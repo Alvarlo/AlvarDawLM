@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            align-content: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #pagina1 {
+            padding: 15px;
+            margin-inline: auto;
+        }
+
+        header {
+            text-align: center;
+            height: 300px;
+            background-image: url(https://www.taylorguitars.com/sites/default/files/styles/hero_images/public/images/2022-11/taylor-features-shapes-hero.jpg?itok=gz1vU_j3);
+            background-position: 50% 75%;
+            align-content: center;
+
+        }
+
+        header h1 {
+            padding: 0;
+            margin: 0px;
+            color: whitesmoke;
+            font-size: 3em;
+        }
+
+        h1 {
+            padding: 0;
+            margin: 0px;
+            color: black;
+            font-size: 2em;
+
+        }
+
+        article header img {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            width: 100%;
+            margin: auto;
+            flex-wrap: wrap;
+            justify-content: right;
+
+        }
+
+        #links {
+            height: 100%;
+            width: 25%;
+            align-content: center;
+            text-align: center;
+            border: solid black 1px;
+            border-radius: 20px;
+            margin-left: 10px;
+            display: inline-block;
+            background-color: white;
+
+
+        }
+
+        #links a:hover {
+            background-color: brown;
+            color: white;
+            transition: 0.5s;
+        }
+
+        nav a {
+            font-size: 2em;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        #lineadivisor {
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .carousel-article {
+            padding: 20px 0;
+        }
+
+        .carousel-container {
+
+            margin: auto;
+
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            scrollbar-color: transparent transparent;
+        }
+
+        .carousel-item {
+            min-width: 30%;
+            scroll-snap-align: start;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 1.9rem;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .flex-item {
+
+            display: flex;
+            width: 48%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .subblock {
+            width: 50%;
+        }
+
+        .subblock-img img {
+            padding: 0;
+            margin:0;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .subblock-text {
+            width: 50%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .Article-Destacados {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="pagina1">
+        <header>
+            <h1>GUITARRAS</h1>
+        </header>
+        <div id="lineadivisor"></div>
+        <nav>
+            <div id="links"><a href="Pag1Pract1T.html">INICIO</a></div>
+            <div id="links"><a href="Pag2Pract1T.html">CONTENIDO</a></div>
+            <div id="links"><a href="Pag3Pract1T.html">CONTACTO</a></div>
+        </nav>
+        <div id="lineadivisor"></div>
+        <section>
+            <article class="carousel-article">
+                <section class="carousel-container">
+                    <section class="carousel">
+                        <figure class="carousel-item">
+                            <img src="https://leftyguitarsonly.com/wp-content/uploads/2024/02/fenCStomteleblonde02shot01-500x500.jpg"
+                                alt="img1">
+                            <figcaption>FENDER</figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="https://cdn11.bigcommerce.com/s-qmkmkpbc/images/stencil/500x659/products/15389/110957/GIBSON-LES-PAUL-STANDARD-50S-FIGURED-TOP-60S-CHERRY-227230335-angle-left__66025.1701208785.jpg?c=2"
+                                alt="img2">
+                            <figcaption>GIBSON</figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img src="https://cdn11.bigcommerce.com/s-ebgn6kzcdd/images/stencil/500x659/products/783/8262/8X3A9228__88617.1730328743.JPG?c=1"
+                                alt="img3">
+                            <figcaption>IBANEZ</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://leftyguitarsonly.com/wp-content/uploads/2023/08/colD1Tshot01-500x500.jpg"
+                                alt="img4">
+                            <figcaption>MARTIN</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://www.russomusic.com/cdn/shop/files/ISS16053C-GUILDISS16053CUSED1984D25CNTNATURALWOHSC_1of19_500x.jpg?v=1712067881"
+                                alt="img5">
+                            <figcaption>GUILD</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://http2.mlstatic.com/D_NQ_NP_674847-MLA52419562385_112022-O.webp" alt="img6">
+                            <figcaption>GRETSCH</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://http2.mlstatic.com/D_NQ_NP_665716-MLA53787892565_022023-O.webp" alt="img7">
+                            <figcaption>RICKENBACKER</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://www.russomusic.com/cdn/shop/files/ISS13624USED2021GSMINI-EKOAPLUSSHADEDEDGEBURSTWITHOSC_4_500x.jpg?v=1682618435"
+                                alt="img8">
+                            <figcaption>TAYLOR</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/z1oAAOSwrZxjfl91/$_12.JPG?set_id=880000500F"
+                                alt="img9">
+                            <figcaption>PAUL REED SMITH</figcaption>
+                        </figure>
+                        <figure class="carousel-item"><img
+                                src="https://guitars.gbase.com/aza/user/gear/esp-ltd-ec-256-snow-whi-2.jpg?maxwidth=500"
+                                alt="img10">
+                            <figcaption>ESP</figcaption>
+                        </figure>
+                    </section>
+                </section>
+
+            </article>
+            <article class="Article-Destacados">
+                <div id="lineadivisor"></div>
+                <h1>DESTACADOS</h1>
+                <div id="lineadivisor"></div>
+            </article>
+            <article class="flex-container">
+                <section class="flex-item">
+                    <figure class="subblock-img"><img
+                            src="https://guitars.gbase.com/aza/user/gear/2019-washburn-wcg55ce-o-comfort-se-natu-XE8eWa3.jpg?maxwidth=500"
+                            alt="img11"></figure>
+                    <figcaption class="subblock-text">WASHBURN</figcaption>
+                </section>
+                <section class="flex-item">
+                    <figcaption class="subblock-text">TAYLOR</figcaption>
+                    <figure class="subblock-img"><img
+                            src="https://guitars.gbase.com/aza/user/gear/taylor-312ce-grand-concert-natural-4-am29fmF.jpg?maxwidth=500"
+                            alt="img12"></figure>
+                    
+                </section>
+                <section class="flex-item">
+                    <figcaption class="subblock-text">FENDER</figcaption>
+                    <figure class="subblock-img"><img
+                            src="https://cdn11.bigcommerce.com/s-qmkmkpbc/products/16013/images/120413/FEN-STRAT-SUONA-THINLINE-EB-VIB-US23104293-thumbnail__97109.1728417399.500.659.jpg?c=2"
+                            alt="img13"></figure>
+                    
+                </section>
+                <section class="flex-item">
+                    <figure class="subblock-img"><img
+                            src="https://cdn11.bigcommerce.com/s-ebgn6kzcdd/images/stencil/500x659/products/909/9238/8X3A9157__42581.1730408825.1280.1280__33278.1733430912.jpg?c=1"
+                            alt="img14"></figure>
+                    <figcaption class="subblock-text">IBANEZ</figcaption>
+                </section>
+
+            </article>
+        </section>
+    </div>
+
+</body>
+
+</html>
