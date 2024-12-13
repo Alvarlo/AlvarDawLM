@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO JS</title>
+</head>
+
+<body> <!--onload="alert('alerta')"-->
+
+    <p onmouseover="this.innerHTML='FROM LOST TO THE RIVER'" onmouseout="this.innerHTML='DE PERDIDOS AL RIO'">DE
+        PERDIDOS AL RIO</p>
+
+    <!-- onmouseclick (cuando haces click)
+        onmouseover (cuando pasas el raton por encima)
+    -->
+
+    <br>
+    <p id="salida"></p>
+
+
+    <!-- FORMAS DE INYECTAR JS EN UN DOCUMENTO HTML -->
+    <script>
+        //COMENTARIO DE LINEA
+        /*
+            COMENTARIO MULTILINEA
+        */
+        //console.log('PACO ES RETARDER!!!');
+        
+        document.getElementById('salida').innerHTML = "<h1>"+ "PACO ES RETARDER" + "</h1>";      //objeto.metodo.selector.propiedad = valor
+        document.getElementById('salida').style.backgroundColor = "red";                                   //objeto.metodo.selector.propiedad = valor
+
+
+
+    </script>
+</body>
+
+</html>
