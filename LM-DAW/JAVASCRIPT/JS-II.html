@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function MostrarContenido() {
+
+            const saludo = "HOLA";
+            const salida = document.getElementById('muestra');
+
+            salida.innerHTML = saludo;
+            console.log(salida);
+        };
+
+
+        function titular() {
+            document.getElementById('titulo').innerHTML = "AQUI ESTAMOS"
+        };
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <p id="muestra"></p><br>
+    <p id="titulo"></p>
+
+    <label>Nombre</label>
+    <input id="nombre"><br>
+    <label>Telefono</label>
+    <input id="tlf"><br>
+    <label>Ciudad</label>
+    <input id="ciudad"><br>
+    <button onclick="mostrarDatos()">ENVIAR</button>
+
+    <script>
+
+        function mostrarDatos() {
+            document.getElementById('titulo').innerHTML = document.getElementById('nombre').value + " - " +  document.getElementById('tlf').value + " - " + document.getElementById('ciudad').value + "<br>";
+            document.getElementById('titulo').innerHTML += "<h1>" + document.getElementById('nombre').value + " - " +  document.getElementById('tlf').value + " - " + document.getElementById('ciudad').value + "<br>";
+        };
+
+
+    </script>
+
+</body>
+
+</html>
