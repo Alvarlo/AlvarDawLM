@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECTURA JSON OBJETO</title>
+    <style>
+        img{
+            width: 300px;
+            border: 2px solid blue
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div id="contenido"> </div>
+
+    <script>
+
+        const datos = [ //esctrucutra JSON = Clave - Valor
+            {titulo:'navidades en los Alpes',texto:'asdb ahjsdb ashjd bajsdh basdj habdj ahdb asjhd asdjhb', url:'https://asset-prod.france.fr/i_Stock_478248290_1_219c81bafc.jpg'},
+            {titulo:'navidades en los Alpes',texto:'asdb ahjsdb ashjd bajsdh basdj habdj ahdb asjhd asdjhb', url:'https://asset-prod.france.fr/i_Stock_478248290_1_219c81bafc.jpg'},
+            {titulo:'navidades en los Alpes',texto:'asdb ahjsdb ashjd bajsdh basdj habdj ahdb asjhd asdjhb', url:'https://asset-prod.france.fr/i_Stock_478248290_1_219c81bafc.jpg'},
+            {titulo:'navidades en los Alpes',texto:'asdb ahjsdb ashjd bajsdh basdj habdj ahdb asjhd asdjhb', url:'https://asset-prod.france.fr/i_Stock_478248290_1_219c81bafc.jpg'}
+        ];
+
+        let tarjeta = document.getElementById('contenido');
+
+        datos.forEach( dato => {
+            tarjeta.innerHTML += ` 
+            <h2>${dato.titulo}</h2>
+            <h2>${dato.texto}</h2>
+            <img src="${dato.url}">
+            `;
+
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
