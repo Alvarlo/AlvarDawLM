@@ -1,0 +1,27 @@
+
+.menu, .menu ul {
+list-style-type: none;
+padding-left: 0;
+}
+
+.menu li {
+margin: 5px 0;
+cursor: pointer;
+position: relative;
+}
+
+.menu > li > ul, .menu > li > ul > li > ul {
+display: none;
+}
+
+.menu > li:hover > ul, .menu > li > ul > li:hover > ul {
+display: block;
+}
+
+.menu ul li {
+margin-left: 20px; /* Sangría para niveles anidados */
+}
+
+.menu ul ul li {
+margin-left: 40px; /* Sangría mayor para subniveles */
+}
