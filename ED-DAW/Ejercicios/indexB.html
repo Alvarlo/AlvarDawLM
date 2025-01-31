@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Animales con Details</title>
+    <style>
+        dialog {
+            position: absolute;
+            left: 10%;
+            border: double 2px blue;
+            background: rgba(150, 255, 220, 0.5);
+        }
+        .animacion-texto {
+            color: blue;
+            animation: cambioColor 2s infinite, skewTexto 2s infinite;
+        }
+        @keyframes cambioColor {
+            0% { color: blue; }
+            50% { color: green; }
+            100% { color: blue; }
+        }
+        @keyframes skewTexto {
+            from { transform: skewX(0deg); }
+            to { transform: skewX(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <details>
+                <summary>Elefante - Foto</summary>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg" alt="Elefante" width="300">
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>León - Página Web</summary>
+                <iframe src="https://www.nationalgeographic.com/animals/mammals/facts/african-lion" width="100%" height="300px"></iframe>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Tigre - Diálogo</summary>
+                <dialog open>El tigre es el felino más grande del mundo, conocido por su pelaje anaranjado con rayas negras.</dialog>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Conejo - Vídeo</summary>
+                <video width="300" height="300" controls autoplay muted>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de vídeo.
+                </video>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Caballo - Audio</summary>
+                <audio controls loop>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mp3">
+                </audio>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>Camaleón - Texto Animado</summary>
+                <div class="animacion-texto">El camaleón es conocido por su capacidad de cambiar de color.</div>
+            </details>
+        </li>
+    </ul>
+</body>
+</html>
