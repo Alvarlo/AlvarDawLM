@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DATOS SWAPI</h1>
+    <p id="salida"></p>
+
+    <script>
+        const API = "https://swapi.dev/api/planets/"
+
+        async function leerApi() {//funcion asincrona
+            for (n = 1; n < 11; n++){
+                const respuesta = await fetch(`${API}${n}`);
+                console.log(respuesta);
+                const dato = await respuesta.json();
+                console.log(dato);
+                document.getElementById('salida').innerHTML +=
+                dato.name + " - " + dato.diameter + "<br>";
+            }
+           
+            
+
+        }
+
+           /*
+            const datos = await respuesta.json();
+            //console.log(datos[1].url)
+
+            datos.forEach(dato => {
+                document.getElementById('listado').innerHTML +=
+                    `
+                    
+                <a href="#" class="col-12 alert alert-warning" style="font-size:1.5vw">${dato.TITULO}</a>
+                `;
+                document.getElementById('contenido').innerHTML +=
+                    `
+                    <div class="col-lg-4 col-md-6 col-sm-12" id="tarjetas">
+                            <img src="${dato.URL}">
+                            <h6 class="text-center">${dato.TITULO}</h6>
+                            <p style= "text-aling:justify">${dato.TEXT}</p>
+                    </div>
+                `;
+                
+            });
+            */
+        
+
+            leerApi();
+
+
+
+    </script>
+</body>
+
+</html>
