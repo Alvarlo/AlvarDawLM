@@ -1,3 +1,24 @@
+/*
+Vamos a gestionar una lista de países haciendo uso de Arrays.
+Para ello necesitarás crear un archivo arrays.js que incluya las siguientes funciones:
+1. Mostrar el número de elementos del array.
+2. Mostrar todos los elementos del array.
+3. Muestra los elementos del array en sentido inverso.
+4. Muestra los elementos del array ordenados alfabéticamente (pero no los ordena).
+5. Añadir un elemento al principio del array.
+6. Añadir un elemento al final del array.
+7. Borrar un elemento al principio del array (y decir cuál se ha borrado).
+8. Borrar un elemento al final del array (y decir cuál se ha borrado).
+9. Muestra el elemento que se encuentra en una posición que el usuario indica.
+10.Muestra la posición en la que se encuentra un elemento que le indica el usuario.
+11.Muestra los elementos que se encuentran en un intervalo que el usuario indica.
+Observaciones:
+Ten en cuenta que el array será una variable global y que se pasará por parámetro en
+todas las funciones.
+Cada opción se mostrará por medio de un botón, de la forma:
+<button onclick="nombreFunción()">Texto del botón</button>
+El resultado de las opciones se muestran en un alert.
+*/
 const paises = ["España", "México", "Argentina", "Brasil", "Chile", "Colombia", "Perú", "Venezuela", "Uruguay", "Ecuador"];
 
 function mostrarNumeroElementos(arr) {
