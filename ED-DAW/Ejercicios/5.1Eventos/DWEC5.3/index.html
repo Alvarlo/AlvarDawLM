@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Prepara un formulario diseñado para almacenar discos, con las siguientes características y
+    restricciones:
+    · (0.5 puntos) Se debe utilizar los elementos estructurales (fieldset, legend y label).
+    Indica en todos los campos el name y el id (se aconseja que sea el mismo)
+    · (1 puntos) La información a guardar es la siguiente (elige el componente adecuado):
+    o Nombre del disco: 20 caracteres y obligatorio. En el cuadro, se mostrará un
+    cuadro con el texto: “Título del disco”. El cuadro de entrada tendrá un tamaño
+    de 30.
+    o Grupo de música o cantante: 20 caracteres y obligatorio. En el cuadro, se
+    mostrará un cuadro con el texto: “Nombre grupo o cantante”. El cuadro de
+    entrada tendrá un tamaño de 30.
+    o Año de publicación. Por defecto será el año 2020, los valores estarán entre el
+    año 1900 y el 2050.
+    o Tipo de música (podrá ser “rock”, “pop”, “punk”, “indie” u “otro”). Por defecto
+    será otro.
+    o Localización: almacenará un número de estantería. El dato puede estar vacío o
+    puede ser numérico, y estará entre 1 y 20.
+    o Prestado: almacenará un valor booleano. Por defecto será false.
+    o Botón submit con el texto guardar.
+    · (0.5 puntos) Fuera del formulario:
+    o Botón con el texto “Ver Discoteca”.
+
+    Crear dos estilos mediante clases css:
+    · (0.25 puntos) Si el dato es válido el texto y el color del borde será negro.
+    · (0.25 puntos) Si el dato no es válido el texto y el color del borde será rojo.-->
+
+    <form action="post">
+        <fieldset>
+         <legend>Personalia:</legend>
+         <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname"><br><br>
+         <label for="lname">Last name:</label>
+         <input type="text" id="lname" name="lname"><br><br>
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email"><br><br>
+         <label for="birthday">Birthday:</label>
+         <input type="date" id="birthday" name="birthday"><br><br>
+         <input type="submit" value="Submit">
+        </fieldset>
+       </form>
+    <script>
+
+    </script>
+</body>
+
+</html>
