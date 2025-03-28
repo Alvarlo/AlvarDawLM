@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://images.wallpapersden.com/image/download/lone-samurai_bGdqZmqUmZqaraWkpJRoZ2hurWZtamY.jpg" onclick="cambioImagen()" id="imagen" style="width: 350px; height: 300px;">
+    <br>
+    <input type="text" id="url">
+    <input type="button" id="cargar" onclick="anadirUrl()" value="cargar">
+    <script>
+        let fotos = ["https://static.vecteezy.com/system/resources/thumbnails/029/615/915/small_2x/samurai-warrior-on-the-background-of-the-moon-cartoon-fantasy-neural-network-ai-generated-photo.jpg","https://preview.redd.it/thoughts-on-my-clean-wallpaper-1920x1080-red-samurai-v0-t1g6bz8jw3ca1.png?auto=webp&s=a82db19277ebfb2feafaf9dbd589452fdf75311d","https://images.alphacoders.com/138/1388771.jpg"]
+        function cambioImagen(){
+            document.getElementById('imagen').src = fotos[Math.floor(Math.random()*fotos.length)];
+            console.log(Math.floor(Math.random()*fotos.length));
+
+        }
+        function anadirUrl(){
+            fotos.push(document.getElementById('url').value);
+            document.getElementById('url').value = "";
+            console.log(fotos);
+        }
+
+
+    </script>
+</body>
+</html>
