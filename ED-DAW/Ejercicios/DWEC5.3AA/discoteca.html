@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Autor: Álvaro Aranda
+Descripción: Formulario para almacenar discos musicales con validación, almacenamiento en localStorage y visualización de datos en consola.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Discoteca</title>
+    <style>
+        /* Estilo para los campos válidos */
+        .valid {
+            color: black;
+            border-color: black;
+        }
+
+        /* Estilo para los campos no válidos */
+        .invalid {
+            color: red;
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Formulario para ingresar datos de un disco -->
+    <form id="discotecaForm">
+        <fieldset>
+            <legend>Información del Disco</legend>
+
+            <label for="nombre">Nombre del disco:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Título del disco" maxlength="20" size="30" required>
+            <br>
+
+            <label for="grupo">Grupo o cantante:</label>
+            <input type="text" id="grupo" name="grupo" placeholder="Nombre grupo o cantante" maxlength="20" size="30" required>
+            <br>
+
+            <label for="anio">Año de publicación:</label>
+            <input type="number" id="anio" name="anio" min="1900" max="2050" value="2020">
+            <br>
+
+            <label for="tipo">Tipo de música:</label>
+            <select id="tipo" name="tipo">
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="punk">Punk</option>
+                <option value="indie">Indie</option>
+                <option value="otro" selected>Otro</option>
+            </select>
+            <br>
+
+            <label for="localizacion">Localización (estantería):</label>
+            <input type="number" id="localizacion" name="localizacion" min="1" max="20">
+            <br>
+
+            <label for="prestado">Prestado:</label>
+            <input type="checkbox" id="prestado" name="prestado">
+            <br>
+
+            <button type="submit">Guardar</button>
+        </fieldset>
+    </form>
+
+    <!-- Botón para visualizar los discos guardados -->
+    <button id="verDiscos">Ver Discos</button>
+
+    <script>
+        // Evento que se activa cuando la página termina de cargar
+        window.addEventListener("load", () => {
+            // Cargar discos almacenados en localStorage si existen
+            const discosGuardados = localStorage.getItem("discoteca");
+            if (discosGuardados) {
+                discoteca = JSON.parse(discosGuardados);
+                console.log("Discos cargados desde localStorage:");
+                discoteca.forEach(disco => console.log(disco.verDatos()));
+            }
+
+            let discoteca = [];
+
+            // Clase que representa un disco musical
+            class Disco {
+                constructor(nombre, grupo, anio, tipo, localizacion, prestado) {
+                    this.nombre = nombre;
+                    this.grupo = grupo;
+                    this.anio = anio;
+                    this.tipo = tipo;
+                    this.localizacion = localizacion;
+                    this.prestado = prestado;
+                }
+
+                // Método para mostrar los datos del disco
+                verDatos() {
+                    return `El disco ${this.nombre} es de ${this.grupo} se grabó en ${this.anio}, es de tipo ${this.tipo}. Está guardado en la estantería: ${this.localizacion} y en estos momentos se encuentra ${this.prestado ? 'Prestado' : 'No prestado'}`;
+                }
+            }
+
+            const form = document.getElementById("discotecaForm");
+            const verDiscosBtn = document.getElementById("verDiscos");
+
+            console.log("Botón 'Ver Discos' cargado correctamente.");
+
+            // Evento para guardar el disco en el array y en localStorage
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                if (form.checkValidity()) {
+                    const nombre = document.getElementById("nombre").value;
+                    const grupo = document.getElementById("grupo").value;
+                    const anio = document.getElementById("anio").value;
+                    const tipo = document.getElementById("tipo").value;
+                    const localizacion = document.getElementById("localizacion").value;
+                    const prestado = document.getElementById("prestado").checked;
+
+                    const disco = new Disco(nombre, grupo, anio, tipo, localizacion, prestado);
+                    discoteca.push(disco);
+                    localStorage.setItem("discoteca", JSON.stringify(discoteca));
+                    form.reset();
+                    alert("Disco guardado correctamente.");
+                }
+            });
+
+            // Evento para mostrar los discos almacenados en la consola
+            verDiscosBtn.addEventListener("click", () => {
+                if (discoteca.length === 0) {
+                    console.log("No hay discos en la discoteca.");
+                } else {
+                    discoteca.forEach(disco => console.log(disco.verDatos()));
+                }
+            });
+        });
+    </script>
+</body>
+</html>

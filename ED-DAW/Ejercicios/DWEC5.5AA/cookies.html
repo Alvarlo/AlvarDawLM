@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cookies</title>
+    <script>
+        function setCookie(nombre, valor, dias) {
+            let fecha = new Date();
+            fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
+            document.cookie = `${nombre}=${valor}; expires=${fecha.toUTCString()}; path=/`;
+        }
+
+        function getCookie(nombre) {
+            let cookies = document.cookie.split('; ');
+            for (let cookie of cookies) {
+                let [clave, valor] = cookie.split('=');
+                if (clave === nombre) return valor;
+            }
+            return "";
+        }
+
+        function mostrarCookies() {
+            alert(document.cookie);
+        }
+
+        function incrementarPuntos() {
+            let puntos = parseInt(getCookie("puntos")) || 0;
+            puntos++;
+            setCookie("puntos", puntos, 7);
+            alert(`Puntos: ${puntos}`);
+        }
+
+        function restarPuntos() {
+            let puntos = parseInt(getCookie("puntos")) || 0;
+            puntos--;
+            setCookie("puntos", puntos, 7);
+            alert(`Puntos: ${puntos}`);
+        }
+
+        function aceptarCookies() {
+            if (confirm("¿Aceptas las cookies?")) {
+                let nombre = getCookie("usuario");
+                if (!nombre) {
+                    nombre = prompt("Introduce tu nombre:");
+                    if (nombre) setCookie("usuario", nombre, 7);
+                }
+                setCookie("puntos", 0, 7);
+            } else {
+                alert("No se almacenarán cookies.");
+            }
+        }
+
+        window.onload = function() {
+            aceptarCookies();
+        };
+    </script>
+</head>
+<body>
+    <h1>Gestión de Cookies</h1>
+    <button onclick="mostrarCookies()">Mostrar Cookies</button>
+    <button onclick="incrementarPuntos()">Sumar Punto</button>
+    <button onclick="restarPuntos()">Restar Punto</button>
+</body>
+</html>
