@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Lista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ol {
+            margin-top: 20px;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Lista Numérica</h1>
+    <!-- Botones para interactuar con la lista -->
+    <div>
+        <button onclick="addItemEnd()">Añadir ítem al final</button>
+        <button onclick="addItemStart()">Añadir ítem al principio</button>
+        <button onclick="addItemMiddle()">Añadir a la mitad</button>
+        <button onclick="removeFirst()">Borrar el primero</button>
+        <button onclick="removeLast()">Borrar el último</button>
+        <button onclick="replaceItem()">Reemplazar ítem</button>
+    </div>
+    <!-- Lista numérica (ol) -->
+    <ol id="lista">
+        <li>Ejemplo de ítem</li>
+    </ol>
+
+    <script>
+        // Referencia a la lista
+        const lista = document.getElementById("lista");
+
+        // Función para añadir ítem al final
+        function addItemEnd() {
+            const texto = prompt("Introduce el texto para el nuevo ítem:");
+            if (texto) {
+                const nuevoItem = document.createElement("li");
+                nuevoItem.textContent = texto;
+                lista.appendChild(nuevoItem);
+            }
+        }
+
+        // Función para añadir ítem al principio
+        function addItemStart() {
+            const texto = prompt("Introduce el texto para el nuevo ítem:");
+            if (texto) {
+                const nuevoItem = document.createElement("li");
+                nuevoItem.textContent = texto;
+                lista.insertBefore(nuevoItem, lista.firstElementChild);
+            }
+        }
+
+        // Función para añadir ítem a la mitad
+        function addItemMiddle() {
+            const posicion = parseInt(prompt(`Introduce la posición en la que deseas añadir el ítem (1-${lista.children.length}):`));
+            const texto = prompt("Introduce el texto para el nuevo ítem:");
+            if (texto) {
+                const nuevoItem = document.createElement("li");
+                nuevoItem.textContent = texto;
+                if (posicion > lista.children.length || posicion < 1) {
+                    lista.appendChild(nuevoItem);
+                } else {
+                    lista.insertBefore(nuevoItem, lista.children[posicion - 1]);
+                }
+            }
+        }
+
+        // Función para borrar el primer ítem
+        function removeFirst() {
+            if (lista.firstElementChild) {
+                lista.removeChild(lista.firstElementChild);
+            } else {
+                alert("La lista está vacía. No hay elementos para borrar.");
+            }
+        }
+
+        // Función para borrar el último ítem
+        function removeLast() {
+            if (lista.lastElementChild) {
+                lista.removeChild(lista.lastElementChild);
+            } else {
+                alert("La lista está vacía. No hay elementos para borrar.");
+            }
+        }
+
+        // Función para reemplazar un ítem
+        function replaceItem() {
+            const posicion = parseInt(prompt(`Introduce la posición del ítem a reemplazar (1-${lista.children.length}):`));
+            if (posicion >= 1 && posicion <= lista.children.length) {
+                const texto = prompt("Introduce el nuevo texto para el ítem:");
+                if (texto) {
+                    lista.children[posicion - 1].textContent = texto;
+                }
+            } else {
+                alert("Posición inválida. No se puede reemplazar.");
+            }
+        }
+    </script>
+</body>
+</html>
