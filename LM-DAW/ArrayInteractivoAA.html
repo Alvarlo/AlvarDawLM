@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Interactivo</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      font-family: sans-serif;
+    }
+    .cuadro {
+      width: 200px;
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .nombre {
+      padding: 5px;
+      cursor: pointer;
+    }
+    .nombre:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cuadro" id="izquierda"></div>
+  <div class="cuadro" id="derecha"></div>
+
+  <script>
+    const personas = ["Alberto","Ana","Pedro","Luisa","Andrés","Laura","Carlos","Carlota"];
+    const izquierda = document.getElementById("izquierda");
+    const derecha = document.getElementById("derecha");
+
+    const estado = Array(personas.length).fill(null); 
+
+    function renderListas() {
+      izquierda.innerHTML = '';
+      derecha.innerHTML = '';
+
+      personas.forEach((nombre, index) => {
+        if (estado[index] === null) {
+          const item = document.createElement("div");
+          item.textContent = nombre;
+          item.classList.add("nombre");
+          item.addEventListener("click", () => {
+            estado[index] = "derecha";
+            renderListas();
+          });
+          izquierda.appendChild(item);
+        } else {
+          const item = document.createElement("div");
+          item.textContent = nombre;
+          item.classList.add("nombre");
+          item.addEventListener("click", () => {
+            estado[index] = null;
+            renderListas();
+          });
+          derecha.appendChild(item);
+        }
+      });
+    }
+
+    renderListas();
+  </script>
+
+</body>
+</html>
